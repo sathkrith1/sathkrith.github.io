@@ -1,54 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sathkrith | Gamer + Developer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>👾 Sathkrith Gaur — Game Developer</title>
+  <meta name="description" content="Game Developer Portfolio | Unreal Engine | C++" />
+
   <style>
-    body {
-      background: #0d0d0d;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 40px;
+    :root{
+      --bg:#02030a;
+      --card:rgba(255,255,255,0.04);
+      --accent:#06b6d4;
+      --text:#e9f6ff;
+      --muted:#97a5b3;
     }
-    h1 {
-      color: #00b4d8;
-      font-size: 3rem;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
-    h2 {
-      color: #888;
-      font-weight: 400;
+    a{color:var(--accent);text-decoration:none}
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:32px 20px;
     }
-    p {
-      max-width: 600px;
-      margin: 20px auto;
-      line-height: 1.6;
-      font-size: 1.1rem;
+
+    /* HEADER */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:48px;
     }
-    a {
-      color: #00b4d8;
-      text-decoration: none;
-      font-weight: bold;
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
     }
-    .socials a {
-      margin: 0 10px;
-      display: inline-block;
+    .avatar{
+      width:64px;height:64px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#06b6d4,#7c3aed);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:800;color:#041421;font-size:22px;
+    }
+    nav a{margin-left:16px;color:var(--muted)}
+
+    /* HERO */
+    .hero{
+      margin-bottom:60px;
+    }
+    .hero h1{font-size:38px;margin-bottom:12px}
+    .hero p{color:var(--muted);max-width:600px}
+
+    /* SECTION */
+    section{margin-bottom:64px}
+    section h2{
+      font-size:26px;
+      margin-bottom:20px;
+      border-left:4px solid var(--accent);
+      padding-left:12px;
+    }
+
+    /* PROJECT GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,0.05);
+      border-radius:14px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 14px 40px rgba(0,0,0,0.4);
+    }
+    .card img{
+      width:100%;height:160px;object-fit:cover;display:block;
+    }
+    .card .info{padding:14px}
+    .card h3{font-size:17px}
+    .card p{font-size:13px;color:var(--muted);margin-top:6px}
+
+    /* SKILLS */
+    .skills{
+      display:flex;flex-wrap:wrap;gap:10px
+    }
+    .skill{
+      padding:8px 12px;
+      border-radius:20px;
+      background:rgba(6,182,212,0.12);
+      border:1px solid rgba(6,182,212,0.3);
+      font-size:13px
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      color:var(--muted);
+      padding-top:24px;
+      border-top:1px solid rgba(255,255,255,0.05);
+    }
+
+    @media(max-width:720px){
+      .hero h1{font-size:30px}
+      header{flex-direction:column;gap:16px}
     }
   </style>
 </head>
 <body>
-  <h1>🎮 Sathkrith Gaur</h1>
-  <h2>Game Developer | Unreal Engine | C++</h2>
 
-  <p>I’m a gamer turned game developer, passionate about building immersive experiences using Unreal Engine and C++.  
-  I specialize in gameplay systems, AI behavior, and performance optimization — bringing ideas to life one frame at a time.</p>
+<div class="container">
 
-  <div class="socials">
-    <a href="https://github.com/sathkrithgaur" target="_blank">GitHub</a> |
-    <a href="#" target="_blank">LinkedIn</a> |
-    <a href="#" target="_blank">YouTube</a>
-  </div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="avatar">SG</div>
+      <div>
+        <strong>Sathkrith Gaur</strong><br>
+        <small style="color:var(--muted)">Game Developer</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="https://github.com/sathkrith1" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/sathkrith-gaur/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Building immersive games with Unreal Engine & C++</h1>
+    <p>
+      I'm a game developer focused on Unreal Engine gameplay systems, AI, UI, and performance-driven design. I enjoy building horror and action experiences.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+
+      <div class="card">
+        <img src="https://placehold.co/800x400/0b1220/ffffff?text=Horror+Survival" alt="Horror Survival">
+        <div class="info">
+          <h3>Horror Survival Game</h3>
+          <p>AI enemies, dynamic events, health & stamina systems</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://placehold.co/800x400/061022/ffffff?text=Combat+Prototype" alt="Combat Prototype">
+        <div class="info">
+          <h3>Combat Prototype</h3>
+          <p>Core combat loop, abilities, and damage systems</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://placehold.co/800x400/071022/ffffff?text=UI+System" alt="UI System">
+        <div class="info">
+          <h3>UI & HUD System</h3>
+          <p>Menus, HUD, inventory and animations</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Unreal Engine 5</div>
+      <div class="skill">C++</div>
+      <div class="skill">Blueprints</div>
+      <div class="skill">Gameplay Systems</div>
+      <div class="skill">AI Behavior</div>
+      <div class="skill">UI / HUD</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Sathkrith Gaur • Game Developer Portfolio
+  </footer>
+
+</div>
+
 </body>
 </html>
